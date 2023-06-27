@@ -1,0 +1,66 @@
+Tujuan Madd Store
+-Topup Game
+-Topup Pulsa
+
+API function
+
+vip.reseller									= Body
+Trakteer									= Headers
+
+Prepaid (Pulsa)
+-Place an Order (https://vip-reseller.co.id/api/prepaid)			= Untuk beli pulsa
+-Cek status pesanan (https://vip-reseller.co.id/api/prepaid)			= pesanan pulsa
+-Mendapatkan Layanan (https://vip-reseller.co.id/api/prepaid)			= layanan pulsa
+
+Postpaid (PLN)
+
+Game & Streaming
+-Place an Order (https://vip-reseller.co.id/api/game-feature)			= Untuk topup game
+-Cek status pemesanan ( https://vip-reseller.co.id/api/game-feature)		= Cek pesanan game (Berhasil/dll)
+-Mendapatkan layanan (https://vip-reseller.co.id/api/game-feature)		= Layanan game, available, server, dll.
+-Mendapatkan nickname game ( https://vip-reseller.co.id/api/game-feature)	= Mendapatkan username game
+
+Alur Transaksi
+1. Banyu mengisi deposit melalui vip-reseller (dengan Gopay biaya Fee 0.7%)
+2. User membeli barang
+3. Data pembelian user tersimpan di dashboard sementara
+4. User membayar (dalam pembayaran ini dikenakan biaya admin 5% / fee 0.7% dengan Qris)
+5. Banyu mendapatkan notifikasi pembelian
+6. Banyu melihat didashboardnya klo user sudah lunas membayar (Jika belum Banyu bisa kontak melalui wa user yang sudah ada di dashboard)
+7. User menerima Konfirmasi pembayaran / kekurangan pembayaran melalui wa (dikirim otomatis oleh sistem)
+8. Banyu konfirmasi item sudah di bayar di dasboardnya agar item dapat dikirim kepada user
+9. user menerima konfirmasi pengiriman melalui wa (dikirim otomatis oleh sistem)
+
+Alur System
+1. Manual						= Halaman vip.reseller	= CHECK
+2. UI/UX & Mendapatkan layanan				= Halaman Website 	= CHECK
+3. Mengirim data ke Banyu				= Halaman Admin		= DESIGN
+4. link to Trakteer					= Halaman Trakteer	= CHECK
+5. Notifikasi pembelian 				= Halaman Admin		= DESIGN
+6. API Trakteer to web					= Halaman Admin		= DESIGN
+7. API WA for message					= Halaman WA		= CONSEPT
+8. Place an order					= Halaman Admin		= DESIGN
+9. Manual / API WA for message / Cek status pemesanan	= Halaman WA		= CONSEPT
+
+Semi Automatic function
+-Sistem akan mendeteksi secara otomatis apakah transaksi sudah lunas atau belum
+-jika belum lunas sistem akan menyuruh pembeli mentransfer kembali
+-jika sudah sistem akan Colldown selama 7 menit sebelum item dikirim
+-namun kita dapat melakukannya secara manual tanpa harus menunggu 7 menit
+
+Mengenai Fee (biaya admin)
+-Dalam transaksi terkena Fee 1,4% (dari trakteer & vip-reseller) => jika dengan Qris
+-jika topup dengan bank (bebas biaya admin) jika dengan pulsa (Rp.8.000 - Rp.10.000) [Gak usah dibaca klo pake Qris]
+-Biaya Fee topup Gopay Rp.2.000 (jadi borongan aja depositnya)
+-Biaya Layanan Tristan-Web (Zeazure) => 25%-30% dari laba bersih selama sebulan
+
+Penghitungan Laba bersih selama sebulan
+- (Deposit/Modal + 1,4% (biaya admin) + Rp.2.000 (topup Gopay) + 25%-30% (Biaya Layanan Website & perawatan server)) - Laba kotor = Profit yang diterima Banyu
+
+ https://vip-reseller.co.id/api/game-feature?key=9NHJKX92dTl3grWYYR2Tqnpewr5uAwrTYgtWldf1iVIZQ0t9LHK90iIieNzHTWDl&sign=cbdb7601685a364045380c6a7a3e613a
+
+
+Data :
+-tombol di pencet
+-data halamn kekirim ke banyu
+-membuat dalaman PHP baru yang berisi data tersebut agar isi dapat langsung di send 

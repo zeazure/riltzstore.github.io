@@ -1,0 +1,1003 @@
+@media (max-width: 800px){
+    :root {
+        --primary-color: #beb200;
+        --secondary-color: #7B4800;
+        --thirty-color: #19007B;
+        --marquee: #FFDEAF;
+        --light-background: #E9E9E9;
+        --dark-background: #BDBDBD;
+    }
+    
+    * {
+        font-family: 'arial';
+    }
+    
+    h2{
+        margin: 0;
+    }
+    
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    
+    #container{
+        background-color: var(--light-background);
+        color: #000;
+        transition: 0.5s ease
+    }
+    
+    #container.color{
+        background-color: var(--dark-background);
+        color: #fff;
+        transition: 0.5s ease
+    }
+    
+    
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        background-color: var(--primary-color);
+        transition: 0.3s ease;
+        height: 10vh;
+    }
+    
+    .scrolled{
+        border-bottom: var(--secondary-color) 3px solid;
+    }
+    
+    .header .logo {
+        display: flex;
+        width: 25%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .header .logo img {
+        width: 85%;
+    }
+    
+    .mode{
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .keterangan{
+        font-size: 0;
+        justify-content: center;
+        border-radius: 50px;
+    }
+    
+    .tema:hover .chat span{
+        transition: 0.001s ease-in 0.4s;
+        margin-left: 0;
+        align-items: center;
+        font-size: 14px;
+        height: 100%;
+        margin-right: 4%;
+    }
+    
+    .chat{
+        display: flex;
+        margin-right: 10px;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 36px;
+        font-size: 0;
+        transition: 0.2s ease-in;
+        border-radius: 50px;
+    }
+    
+    #container.color .chat{
+        background-color: var(--mainColor);
+    }
+    
+    #container.color .akun{color: #fff;}
+    #container.color .notifikasi{color: yellow;}
+    #container.color #g {color: aliceblue;}
+    #container.color .g{color: white;}
+    
+    .tema .chat{
+        width: 40px;
+        transition: 0.5s ease;
+    }
+    
+    .tema:hover .chat {
+        display: flex;
+        justify-content: flex-end;
+        transition: 0.2s ease;
+        transform: scale(1.1);
+        width: 125px;
+    }
+    
+    .tema:hover .chat svg{
+        transition: ease-out 0.5s;
+        margin-right: 5%;
+    }
+    
+    .notifikasi:hover .chat {
+        transition: 0.2s ease;
+        transform: scale(1.05);
+    }
+    
+    .notifikasi .chat::after{
+        content: "";
+        font-size: 12px;
+        margin: 0 0 37% -10%;
+        background-color: red;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+    
+    }
+    
+    .t{
+        display: flex;
+        align-items: center;
+    }
+    
+    .g{
+        font-size: 0;
+        display: none;
+    }
+    
+    #container.color .t{
+        display: none;
+    }
+    
+    #container.color .g{
+        display: flex;
+    }
+    
+    .header .tab {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+    }
+    
+    .header .tab .opsi {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 75%;
+    }
+    
+    .tab .text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        width: 50%;
+        height: 23px;
+    }
+    
+    .tab .text:hover,
+    .tab .text:hover a {
+        text-decoration: underline 2px var(--secondary-color);
+    }
+    
+    .tab a {
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .information {
+        display: flex;
+        align-items: center;
+        height: 3vh;
+        background-color: var(--marquee);
+    }
+    
+    .isian {
+        display: flex;
+        justify-content: center;
+        height: auto;
+    }
+    
+    .isian .isi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+    
+    #highlight {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 10vh;
+    }
+    
+    .highlight {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+        height: 30vh;
+    }
+    
+    .highlight .slide {
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .highlight .tombol {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5%;
+    }
+    
+    .prev,
+    .next {
+        cursor: pointer;
+        height: 10px;
+        color: #a5a5a5;
+        transition: 0.2s ease;
+    }
+    
+    .prev:hover,
+    .next:hover {
+        transform: scale(1.2);
+        color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .highlight .item {
+        max-width: 80%;
+        height: 27vh;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 4px 5px 7px rgba(0, 0, 0, 0.2);
+    }
+    
+    .highlight .item img {
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .highlight .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3vh;
+    }
+    
+    .highlight .button .line {
+        cursor: pointer;
+        margin: 0 5px 0 5px;
+        border-radius: 20px;
+        width: 30px;
+        height: 5px;
+        transition: 0.5s ease;
+        background-color: #a7a5a5;
+    }
+    
+    .button .line:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        border: 1px solid #000;
+    }
+    
+    .highlight .button .line.active {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .isi .topup{
+        margin-top: 15px;
+        height: 75vh;
+        width: 90%;
+    }
+    
+    .topup .judul{
+        display: flex;
+        height: 3vh;
+    }
+    
+    .topup .garis{
+        width: 10%;
+        border: var(--primary-color) 2px solid;
+    }
+    
+    .topup .game{
+        display: flex;
+        margin-top: 10px;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 63vh;
+    }
+    
+    .game .atas, .game .bawah{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        height: 45%;
+    }
+    
+    .game .kotak{
+        cursor: pointer;
+        width: 100px;
+        height: 120px;
+        text-decoration: none;
+        border-radius: 10px;
+        padding-top: 30px;
+        box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.2);
+        background-color: var(--thirty-color);
+    }
+    
+    .game #color-k{
+        background-color: var(--secondary-color);
+    }
+    
+    .game .kotak:hover{
+        transition: 0.3s ease;
+        transform: scale(1.02);
+    }
+    
+    .game .kotak .gambar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 35%;
+    }
+    
+    .game .kotak .gambar img{
+        width: 65%;
+    }
+    
+    .game .kotak .nama{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        height: 10vh;
+        font-weight: bold;
+    }
+    
+    .game .kotak .nama p{
+        margin: 0;
+        font-size: 15px;
+    }
+    
+    .isi .about{
+        height: 40vh;
+        background-color: var(--primary-color);
+        border-top: var(--secondary-color) 5px solid;
+        border-bottom: var(--secondary-color) 5px solid;
+    }
+    
+    .about .judul{
+        display: flex;
+        height: 10vh;
+        font-size: 20px;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    
+    .about .data{
+        height: 30vh;
+    }
+    
+    .about .data p{
+        width: 80%;
+        font-size: 15px;
+    }
+    
+    .isian .artikel {
+        display: flex;
+        margin-top: 10px;
+        height: 35vh;
+        overflow: hidden;
+        width: 100%;
+    }
+    
+    .artikel .logo {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+        width: 27%;
+    }
+
+    .artikel .logo svg{
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+    
+    .artikel .isian {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 15px;
+        height: 100%;
+        width: 73%;
+        justify-content: center;
+    }
+    
+    .artikel .judul {
+        display: flex;
+        align-items: flex-start;
+        font-size: 20px;
+        height: auto;
+    }
+    
+    .artikel .judul h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+    }
+    
+    .artikel .isian .isi {
+        margin-top: 5px;
+        height: 20%;
+        width: 80%;
+    }
+    
+    .artikel .isian .isi p{
+        margin: 0;
+        font-size: 12px;
+    }
+    
+    
+    .footer {
+        display: flex;
+        background-color: var(--primary-color);
+        height: 45vh;
+        color: #fff;
+        border-top: var(--secondary-color) 3px solid;
+    }
+    
+    .footer .title {
+        display: none;
+    }
+
+    .footer .isian {
+        display: flex;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        background-color: transparent;
+        display: flex;
+    }
+
+    .footer .isian .menu,
+    .footer .isian .medsos,
+    .footer .isian .kontak {
+        display: none;
+    }
+
+    .footer .isian #kontak {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 100%;
+    }
+
+    .footer .text {
+        height: auto;
+        width: 100%;
+        justify-content: center;
+    }
+    
+}
+
+
+@media (min-width: 800px){
+    :root {
+        --primary-color: #dacb00;
+        --secondary-color: #7B4800;
+        --thirty-color: #19007B;
+        --marquee: #FFDEAF;
+        --light-background: #E9E9E9;
+        --dark-background: #BDBDBD;
+    }
+    
+    * {
+        font-family: 'arial';
+    }
+    
+    h2{
+        margin: 0;
+    }
+    
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    
+    #container{
+        background-color: var(--light-background);
+        color: #000;
+        transition: 0.5s ease
+    }
+    
+    #container.color{
+        background-color: var(--dark-background);
+        color: #fff;
+        transition: 0.5s ease
+    }
+    
+    
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        background-color: var(--primary-color);
+        transition: 0.3s ease;
+        height: 10vh;
+    }
+    
+    .scrolled{
+        border-bottom: var(--secondary-color) 3px solid;
+    }
+    
+    .header .logo {
+        display: flex;
+        width: 15%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .header .logo img {
+        width: 65%;
+    }
+    
+    .mode{
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .keterangan{
+        font-size: 0;
+        justify-content: center;
+        border-radius: 50px;
+    }
+    
+    .tema:hover .chat span{
+        transition: 0.001s ease-in 0.4s;
+        margin-left: 0;
+        align-items: center;
+        font-size: 14px;
+        height: 100%;
+        margin-right: 4%;
+    }
+    
+    .chat{
+        display: flex;
+        margin-right: 10px;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 36px;
+        font-size: 0;
+        transition: 0.2s ease-in;
+        border-radius: 50px;
+    }
+    
+    #container.color .chat{
+        background-color: var(--mainColor);
+    }
+    
+    #container.color .akun{color: #fff;}
+    #container.color .notifikasi{color: yellow;}
+    #container.color #g {color: aliceblue;}
+    #container.color .g{color: white;}
+    
+    .tema .chat{
+        width: 40px;
+        transition: 0.5s ease;
+    }
+    
+    .tema:hover .chat {
+        display: flex;
+        justify-content: flex-end;
+        transition: 0.2s ease;
+        transform: scale(1.1);
+        width: 125px;
+    }
+    
+    .tema:hover .chat svg{
+        transition: ease-out 0.5s;
+        margin-right: 5%;
+    }
+    
+    .notifikasi:hover .chat {
+        transition: 0.2s ease;
+        transform: scale(1.05);
+    }
+    
+    .notifikasi .chat::after{
+        content: "";
+        font-size: 12px;
+        margin: 0 0 37% -10%;
+        background-color: red;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+    
+    }
+    
+    .t{
+        display: flex;
+        align-items: center;
+    }
+    
+    .g{
+        font-size: 0;
+        display: none;
+    }
+    
+    #container.color .t{
+        display: none;
+    }
+    
+    #container.color .g{
+        display: flex;
+    }
+    
+    .header .tab {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 20%;
+    }
+    
+    .header .tab .opsi {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 75%;
+    }
+    
+    .tab .text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        width: 35%;
+        height: 23px;
+    }
+    
+    .tab .text:hover,
+    .tab .text:hover a {
+        text-decoration: underline 2px var(--secondary-color);
+    }
+    
+    .tab a {
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .information {
+        display: flex;
+        align-items: center;
+        height: 3vh;
+        background-color: var(--marquee);
+    }
+    
+    .isian {
+        display: flex;
+        justify-content: center;
+        height: auto;
+    }
+    
+    .isian .isi {
+        justify-content: center;
+        height: 100%;
+        width: 70%;
+    }
+    
+    #highlight {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 10vh;
+    }
+    
+    .highlight {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+        height: 50vh;
+    }
+    
+    .highlight .slide {
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .highlight .tombol {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5%;
+    }
+    
+    .prev,
+    .next {
+        cursor: pointer;
+        height: 10px;
+        color: #a5a5a5;
+        transition: 0.2s ease;
+    }
+    
+    .prev:hover,
+    .next:hover {
+        transform: scale(1.2);
+        color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .highlight .item {
+        max-width: 700px;
+        height: 35vh;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 4px 5px 7px rgba(0, 0, 0, 0.2);
+    }
+    
+    .highlight .item img {
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .highlight .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3vh;
+    }
+    
+    .highlight .button .line {
+        cursor: pointer;
+        margin: 0 5px 0 5px;
+        border-radius: 20px;
+        width: 30px;
+        height: 5px;
+        transition: 0.5s ease;
+        background-color: #a7a5a5;
+    }
+    
+    .button .line:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        border: 1px solid #000;
+    }
+    
+    .highlight .button .line.active {
+        background-color: rgba(0, 0, 0, 0.8);
+        border: 1px solid #000;
+    }
+    
+    .isi .topup{
+        height: 75vh;
+    }
+    
+    .topup .judul{
+        display: flex;
+        height: 5vh;
+    }
+    
+    .topup .garis{
+        width: 7%;
+        border: var(--primary-color) 2px solid;
+    }
+    
+    .topup .game{
+        display: flex;
+        margin-top: 10px;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 63vh;
+    }
+    
+    .game .atas, .game .bawah{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 20px;
+        height: 45%;
+    }
+    
+    .game .kotak{
+        cursor: pointer;
+        overflow: hidden;
+        width: 30%;
+        border-radius: 10px;
+        padding-top: 30px;
+        box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.2);
+        background-color: var(--thirty-color);
+    }
+    
+    .game #color-k{
+        background-color: var(--secondary-color);
+    }
+    
+    .game .kotak:hover{
+        transition: 0.3s ease;
+        transform: scale(1.02);
+    }
+    
+    .game .kotak .gambar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+    }
+    
+    .game .kotak .gambar img{
+        width: 50%;
+    }
+    
+    .game .kotak .nama{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        height: 10vh;
+        font-weight: bold;
+    }
+    
+    .game .kotak .nama p{
+        margin: 0;
+        font-size: 19px;
+    }
+    
+    .isi .about{
+        height: 40vh;
+        background-color: var(--primary-color);
+        border-top: var(--secondary-color) 5px solid;
+        border-bottom: var(--secondary-color) 5px solid;
+    }
+    
+    .about .judul{
+        display: flex;
+        height: 10vh;
+        font-size: 20px;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    
+    .about .data{
+        height: 30vh;
+    }
+    
+    .about .data p{
+        width: 80%;
+        font-size: 18px;
+    }
+    
+    .isian .artikel {
+        display: flex;
+        margin-top: 10px;
+        height: 35vh;
+        overflow: hidden;
+        width: 100%;
+    }
+    
+    .artikel .logo {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+        width: 27%;
+    }
+
+    .artikel .logo svg{
+        margin-top: 20px;
+    }
+    
+    .artikel .isian {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 15px;
+        height: 100%;
+        width: 73%;
+        justify-content: center;
+    }
+    
+    .artikel .judul {
+        display: flex;
+        align-items: flex-start;
+        font-size: 20px;
+        height: auto;
+    }
+    
+    .artikel .judul h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 25px;
+    }
+    
+    .artikel .isian .isi {
+        margin-top: 5px;
+        height: 20%;
+        width: 100%;
+    }
+    
+    .artikel .isian .isi p{
+        margin: 0;
+        font-size: 17px;
+    }
+    
+    .footer {
+        background-color: var(--primary-color);
+        height: 55vh;
+        color: #fff;
+        border-top: var(--secondary-color) 3px solid;
+    }
+    
+    .footer .title {
+        display: flex;
+        height: 15vh;
+        width: 100%;
+    }
+    
+    .footer .title .logo {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+        width: 7%;
+    }
+    
+    .footer .title .logo img {
+        width: 75%;
+    }
+    
+    .footer .title .slogan {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-weight: bold;
+    }
+    
+    .footer .title .slogan p{
+        margin-top: 19px;
+        margin-left: 10px;
+    }
+    
+    .footer .isian {
+        height: 33vh;
+        width: 100%;
+        background-color: transparent;
+        display: flex;
+    }
+    
+    .footer .isian .menu,
+    .footer .isian .medsos,
+    .footer .isian .kontak {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 33%;
+    }
+    
+    .footer .text {
+        height: 100%;
+        width: 50%;
+    }
+    
+    .footer #kontak {
+        display: none;
+    }
+    
+}

@@ -1,0 +1,351 @@
+:root {
+    --primary-color: #dacb00;
+    --secondary-color: #7B4800;
+    --thirty-color: #19007B;
+    --marquee: #FFDEAF;
+    --light-background: #E9E9E9;
+    --dark-background: #BDBDBD;
+}
+
+* {
+    font-family: 'arial';
+}
+
+h2 {
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    background-color: var(--light-background);
+    color: #000;
+    transition: 0.5s ease
+}
+
+#container.color {
+    background-color: var(--dark-background);
+    color: #fff;
+    transition: 0.5s ease
+}
+
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    transition: 0.3s ease;
+    height: 10vh;
+}
+
+.scrolled {
+    border-bottom: var(--secondary-color) 3px solid;
+}
+
+.header .logo {
+    display: flex;
+    width: 15%;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .logo img {
+    width: 65%;
+}
+
+.mode {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.keterangan {
+    font-size: 0;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+
+#container.color .t {
+    display: none;
+}
+
+#container.color .g {
+    display: flex;
+}
+
+.header .tab {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 20%;
+}
+
+.header .tab .opsi {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 75%;
+}
+
+.tab .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    width: 35%;
+    height: 23px;
+}
+
+.tab .text:hover,
+.tab .text:hover a {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.tab a {
+    text-decoration: none;
+    color: #000;
+}
+
+.isian {
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+.isian .isi {
+    justify-content: center;
+    padding-top: 10px;
+    height: 100%;
+    width: 70%;
+}
+
+.isi .topup {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    height: auto;
+}
+
+.topup .judul {
+    display: flex;
+    height: 5vh;
+}
+
+.topup .game {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 10vh;
+}
+
+.topup .game .kotak p {
+    margin: 0;
+}
+
+.topup .game .kotak input {
+    margin-top: 5px;
+    padding-left: 5px;
+    height: 5vh;
+    font-size: 17px;
+    border-radius: 7px;
+    border: #000 1px ridge;
+    width: 99%;
+}
+
+.isi .item {
+    margin-top: 10px;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.item .data {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    justify-content: center;
+}
+
+.item .data button {
+    width: 100%;
+    max-width: 200px;
+    height: 20vh;
+    /* Atur lebar maksimal sesuai kebutuhan */
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 4px 5px 7px rgba(00, 00, 00, 0.2);
+}
+
+.item .data button:hover{
+    cursor: pointer;
+    transition: 0.3s ease;
+    background-color: var(--primary-color);
+}
+
+.item .data button img{
+    width: 50%;
+}
+
+.isi .konfirmasi {
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    height: auto;
+}
+
+.konfirmasi .judul {
+    display: flex;
+    height: auto;
+}
+
+.konfirmasi .game {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: auto;
+}
+
+.konfirmasi .game .kotak{
+    margin-top: 20px;
+}
+
+.konfirmasi .game .kotak p {
+    margin: 0;
+}
+
+.konfirmasi .game .kotak input {
+    cursor: default;
+    margin-top: 5px;
+    padding-left: 5px;
+    height: 5vh;
+    font-size: 17px;
+    border-radius: 7px;
+    background-color: #d3d3d3;
+    border: #000 1px ridge;
+    width: 99%;
+}
+
+.isi .pembayaran {
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    height: 50vh;
+}
+
+.pembayaran .judul {
+    display: flex;
+    height: auto;
+}
+
+.pembayaran .game {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: auto;
+}
+
+.pembayaran .game .kotak{
+    margin-top: 20px;
+}
+
+.pembayaran .game .kotak p {
+    margin: 0;
+}
+
+.pembayaran .game .kotak input {
+    margin-top: 5px;
+    padding-left: 5px;
+    height: 5vh;
+    font-size: 17px;
+    border-radius: 7px;
+    border: #000 1px ridge;
+    width: 99%;
+}
+
+input:focus{
+    outline: none;
+    border-width: 1px;
+}
+
+
+
+.footer {
+    background-color: var(--primary-color);
+    height: 55vh;
+    color: #fff;
+    border-top: var(--secondary-color) 3px solid;
+}
+
+.footer .title {
+    display: flex;
+    height: 15vh;
+    width: 100%;
+}
+
+.footer .title .logo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    width: 7%;
+}
+
+.footer .title .logo img {
+    width: 75%;
+}
+
+.footer .title .slogan {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: bold;
+}
+
+.footer .title .slogan p {
+    margin-top: 19px;
+    margin-left: 10px;
+}
+
+.footer .isian {
+    height: 33vh;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+}
+
+.footer .isian .menu,
+.footer .isian .medsos,
+.footer .isian .kontak {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 33%;
+}
+
+.footer .text {
+    height: 100%;
+    width: 50%;
+}
+
+.footer #kontak {
+    display: none;
+}
